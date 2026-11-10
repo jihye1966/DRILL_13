@@ -7,6 +7,11 @@ import play_mode
 
 
 image = None
+ITEM_SIZES = {
+    SDLK_0: 0,
+    SDLK_1: 21,
+    SDLK_2: 41,
+}
 
 
 def init():
@@ -40,11 +45,7 @@ def handle_events():
         if event.key == SDLK_ESCAPE:
             game_framework.pop_mode()
             return
-        if event.key in (SDLK_0, SDLK_1, SDLK_2):
-            play_mode.boy.ball_size = {
-                SDLK_0: 0,
-                SDLK_1: 21,
-                SDLK_2: 41,
-            }[event.key]
+        if event.key in ITEM_SIZES:
+            play_mode.boy.ball_size = ITEM_SIZES[event.key]
             game_framework.pop_mode()
             return
