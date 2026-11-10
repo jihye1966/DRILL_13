@@ -54,6 +54,8 @@ class Boy:
         game_world.add_oject(ball)
 
     def set_ball_size(self, size):
+        if size not in (0,) + Ball.supported_sizes:
+            raise ValueError(f'지원하지 않는 선택 공 크기: {size}')
         self.ball_size = size
 
     def handle_event(self, event):
