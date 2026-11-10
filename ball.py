@@ -5,9 +5,10 @@ import game_world
 
 class Ball:
     images = {}
+    supported_sizes = (21, 41)
 
     def __init__(self, x, y, velocity, size=21):
-        if size not in (21, 41):
+        if size not in Ball.supported_sizes:
             raise ValueError(f'지원하지 않는 공 크기: {size}')
         if size not in Ball.images:
             Ball.images[size] = load_image(f'ball{size}x{size}.png')
