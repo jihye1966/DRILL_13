@@ -8,6 +8,7 @@ import play_mode
 
 image = None
 ITEM_SELECT_IMAGE = 'item_select.png'
+CANVAS_CENTER = (400, 300)
 ITEM_SIZES = {
     SDLK_0: 0,
     SDLK_1: 21,
@@ -32,7 +33,7 @@ def update():
 def render():
     clear_canvas()
     game_world.render()
-    image.draw(400, 300)
+    image.draw(*CANVAS_CENTER)
     update_canvas()
 
 
