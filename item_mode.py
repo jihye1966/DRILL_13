@@ -1,4 +1,4 @@
-from pico2d import *
+from pico2d import clear_canvas, load_image, update_canvas
 from sdl2 import SDLK_0, SDLK_1, SDLK_2, SDLK_ESCAPE, SDL_KEYDOWN, SDL_QUIT
 
 import game_framework
