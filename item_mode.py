@@ -7,6 +7,7 @@ import play_mode
 
 
 image = None
+ITEM_SELECT_IMAGE = 'item_select.png'
 ITEM_SIZES = {
     SDLK_0: 0,
     SDLK_1: 21,
@@ -16,7 +17,7 @@ ITEM_SIZES = {
 
 def init():
     global image
-    image = load_image('item_select.png')
+    image = load_image(ITEM_SELECT_IMAGE)
 
 
 def finish():
