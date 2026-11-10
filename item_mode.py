@@ -9,10 +9,13 @@ import play_mode
 image = None
 ITEM_SELECT_IMAGE = 'item_select.png'
 CANVAS_CENTER = (400, 300)
+NO_BALL = 0
+SMALL_BALL = 21
+LARGE_BALL = 41
 ITEM_SIZES = {
-    SDLK_0: 0,
-    SDLK_1: 21,
-    SDLK_2: 41,
+    SDLK_0: NO_BALL,
+    SDLK_1: SMALL_BALL,
+    SDLK_2: LARGE_BALL,
 }
 
 
