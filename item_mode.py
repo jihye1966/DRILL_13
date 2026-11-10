@@ -46,6 +46,6 @@ def handle_events():
             game_framework.pop_mode()
             return
         if event.key in ITEM_SIZES:
-            play_mode.boy.ball_size = ITEM_SIZES[event.key]
+            play_mode.boy.set_ball_size(ITEM_SIZES[event.key])
             game_framework.pop_mode()
             return
